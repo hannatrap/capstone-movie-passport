@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container">
+  <div class="row ">
+    <aside class="col-md-4 col-lg-3 col-sm-12" id="home-aside">
+      <div class="card user-card">
+        <div class="col">
+            <div class="card-body-home">
+              <p class="card-text">
+              </p>
+              <a href="/users/{{ g.user.id }}" class="card-link">
+                <img src="{{ g.user.image_url }}"
+                     alt="Image for {{ g.user.username }}"
+                     class="card-image">
+                    
+                     <h5>@{{ g.user.username }}</h5>
+
+  
+   
+                        <h6>
+                          <p>Playlists:                      </p>
+                          <a href="/users/{{ g.user.id }}">{{ g.user.playlists | length }}</a>
+
+                      </h6>
+
+              </a>
+            </div>
+          </div>
+        </div>
+        </aside>
+        <div class="col">
+
+          <h2>Check out New Movie Playlists!</h2>
+          {% for p in playlists %}
+
+          <div class="playlist-card" style="width: 25rem;">
+          
+            <img
+              src="/static/images/bluebanner.png" 
+              class="card-img-top"
+              alt="..."
+              height="30%"
+            />
+            <a href="/users/{{ p.user.id }}" class="card-link">
+              <img src="{{ p.user.image_url }}"
+                   alt="Image for {{ p.user.username }}"
+                   class="card-image">
+                  
+                   <p>@{{ g.user.username }}</p>
+            <div class="card-body">
+              <h4 class="card-text-title">
+                <a href="/playlists/{{p.id}}"> {{ p.playlist_name }}
+                </h4></a>
+              <p class="card-text-about">
+                About: {{ p.playlist_about }}
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+{% endblock %}
+
+

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>All Playlists</h1>
+<p><a class="btn btn-primary" href="/playlists/new">Add a new playlist!</a></p>
+<div class="col-sm-6">
+  <ul class="list-group" id="playlists">
+
+
+{% for playlist in playlists %}
+
+<div class="playlist-card">
+  <a href="/playlists/{{ playlist.id }}" class="playlist-link"></a>
+
+  <a href="/users/{{ user.id }}">
+    <img src="{{ user.image_url }}" alt="user image" class="timeline-image">
+  </a>
+
+
+    <a href="/users/{{ user.id }}">@{{ user.username }}</a>
+    <div class="message-area">
+    <h4 class="show-playlist-name">{{ playlist.playlist_name }}</h4>
+    <p class="show-playlist-about">{{ playlist.playlist_about }}</p>
+  </div>
+
+</div>
+
+{% endfor %}
+</ul>
+</div>
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

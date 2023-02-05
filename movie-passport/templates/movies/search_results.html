@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} {% endblock %}
+
+{% block nav1 %} active {% endblock %}
+
+{% block content %}
+<div class="container-fluid" id="movie-list">
+<div class="row row-cols-2 justify-content-center mt-2" style="--bs-gutter-x:0; ">
+<p> Search Results for "{{s}}"</p>
+<table class="movie-table">
+    <thead>
+        <tr>
+
+            <th>Movie Title</th>
+            <th>Year Released</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for movie in movies %}
+
+            <tr>
+
+            <td>   
+                <a href="/movies/{{movie['imdbID']}}" id="id">
+                    {{ movie['Title'] }}
+                    </a>
+            </td> 
+            <td>
+                {{ movie['Year'] }}
+            </td> 
+
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>              
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block footer %} {% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<div>
+  <img src="{{ movie['Poster'] }}"
+  alt="Image for movie"
+  class="movie-image">
+</div>
+  <div class="card text-center" style="width: 18rem;" id="movie-info" >
+    <div class="card-body">
+    <h3 class="card-title text-center">     {{ movie['Title'] }}   </h3>
+    <p>Year Released: {{ movie['Year'] }}</p>
+      <div>
+
+  
+        <p>Plot: {{ movie['Plot'] }}</p>
+
+      </div>
+    
+</div>
+</div>
+
+
+  <div class="card text-center" style="width: 18rem;">
+    <div class="card-body">
+
+    <h5 class="card-title text-center">       Add {{ movie['Title'] }} To Playlist:   </h5>
+
+      <div>
+        {% for playlist in g.user.playlists %}
+        
+      <p> <a  href="/playlists/add/{{ playlist.id }}/{{ movie['imdbID'] }}">{{ playlist.playlist_name }}</a><p>
+      {% endfor %}
+      </div>
+    
+</div>
+</div>
+
+
+
+{% endblock %}
+
+

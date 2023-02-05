@@ -1,0 +1,548 @@
+/* ====================== General */
+
+body {
+  background-image: url('/static/images/background-image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height:100%;  
+}
+
+body.error-404 {
+  background-color: #1da1f2;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.btn {
+  border-radius: 50px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* ======================= Nav */
+
+.navbar {
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border-bottom: 1px solid rgba(249, 180, 255, 0.913);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 9999;
+}
+
+.navbar a {
+  color: #6699bb;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #e294c9;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand > img {
+  display: inline-block;
+  margin-bottom: 4px;
+  margin-right: 8px;
+  width: 150px;
+  border-radius: 2px;
+}
+
+.nav > li > a > img {
+  width: 32px;
+  border-radius: 32px;
+}
+
+ul.nav.navbar-nav {
+  align-items: center;
+}
+
+ul.nav.navbar-nav li {
+  margin: 0 0.5rem;
+  display: flex;
+}
+
+nav form.navbar-form {
+  top: 10px;
+  bottom: 4px;
+  display: flex;
+  position: relative;
+}
+
+#search.form-control {
+  border-radius: 20px;
+  margin-bottom: 0;
+  width: 100%;
+  font-size: 13px;
+  padding-right: 28px;
+  box-sizing: border-box;
+}
+
+#search-form-btn {
+  display: flex;
+}
+
+
+
+/* on "onboarding" pages (signup & login), the navbar is
+   different: no search box, the logo is centered, and it has
+   a background color.
+ */
+
+.onboarding > .navbar {
+  background-size: 100% 100%;
+}
+
+.onboarding .navbar-header {
+  margin: 0 auto;
+}
+
+.onboarding .navbar-brand {
+  margin: 0;
+}
+
+.onboarding .navbar-brand span {
+  display: none;
+}
+
+.onboarding .nav.navbar-nav.navbar-right {
+  position: absolute;
+  right: 16px;
+}
+
+.onboarding > .navbar a {
+  color: #530567;
+}
+
+.onboarding > .navbar form.navbar-form {
+  display: none;
+}
+
+.onboarding {
+  background-image: url('/static/images/background-image.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height:100%;  
+}
+
+@media (max-width: 468px) {
+  nav form.navbar-form {
+    display: none;
+  }
+}
+
+nav + .container {
+  margin-bottom: 1rem;
+}
+
+/* ===================== User profile */
+
+.join-message {
+  margin-top: 100px;
+  color:rgba(117, 47, 123, 0.913);
+  align-items:center;
+}
+
+#profile-image,
+#profile-avatar {
+  border-radius: 100%;
+  display: block;
+  margin-left: -15px;
+}
+
+#profile-image {
+  margin: 0 auto 15px;
+  width: 100%;
+}
+
+#profile-avatar {
+  width: 150;
+  height: 150px;
+  border: 5px solid #fff;
+  margin-top: 0px;
+  z-index: 1;
+  position: relative;
+  box-shadow: 0 1px 1px rgba(136, 153, 166, 0.15);
+}
+
+.timeline-image {
+  border-radius: 48px;
+  height: 48px;
+  width: 48px;
+  margin-top: 2px;
+}
+
+.playlist-area,
+.timeline-image {
+  display: inline-block;
+}
+
+.playlist-area {
+  margin-left: 10px;
+}
+
+#mp-hero {
+  height: 360px;
+  margin-top: -16px;
+  opacity: 0.7;
+  background-size: cover;
+  background-position: top center;
+}
+
+.full-width {
+  width: 100vw;
+  margin: 0 -50vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+}
+
+.row.full-width {
+  background-color: #fff;
+  margin-top: -80px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  height: 60px;
+  align-items: center;
+}
+
+
+.user-stats > .ml-auto {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.user-stats > .ml-auto .btn {
+  min-width: 105px;
+  padding: 6px 16px;
+}
+
+.stat {
+  position: relative;
+
+  text-align: center;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 14px 15px 7px;
+  line-height: 1;
+}
+
+.stat > .small {
+  color: #553255;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+}
+
+.stat > .small + h4 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 3px;
+}
+
+#playlists {
+  position: relative;
+}
+
+#playlists .playlist-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.show-playlist-name {
+  text-align: center;
+}
+
+.show-playlist-about {
+  margin-left: 1rem;
+}
+
+#playlists .list-group-item a:not(.playlist-link) {
+  position: relative;
+  z-index: 2;
+}
+
+#playlists .list-group-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 20px 12px;
+}
+
+#playlists:not(.no-hover) .list-group-item:hover {
+  background-color: #e6ecf0;
+}
+
+#sidebar-username {
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 28px;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .full-width .user-stats .stat {
+    display: none;
+  }
+}
+
+.user-location {
+  color: #657786;
+}
+
+/* ==================== User cards  */
+
+.user-card {
+  width: 100%;
+  padding-bottom: 30%;
+  border-radius: 5px;
+  position: relative;
+  background: white;
+  margin-top: 20px;
+}
+
+.user-card > div {
+  position: absolute;
+  background: #c9f1ff;
+}
+
+.user-card form {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.user-card form .btn {
+  min-width: 89px;
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+.card-hero {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.card-image {
+  border: 3px solid rgb(237, 154, 154);
+  border-radius: 70px;
+  height: 70px;
+  width: 70px;
+  margin-top: -35px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-link {
+  display: inline-block;
+  margin-left: 10px;
+  color: #580085;
+}
+
+.card-link > p {
+  position: absolute;
+}
+
+.user-cards {
+  margin-bottom: 30px;
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.image-wrapper {
+  width: 100%;
+  padding-bottom: 30%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+p.card-bio {
+  margin: 2em 10px 0;
+}
+
+/* ============================ Signed out home */
+
+.home-hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  text-shadow: 0 0 8px #66757f;
+}
+
+.home-hero .btn {
+  text-shadow: none;
+  position: relative;
+  z-index: 1;
+  width: 150px;
+}
+
+.home-hero h1 {
+  margin-bottom: 4rem;
+}
+
+.home-hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================== Signed in Home */
+
+#home-aside > .user-card {
+  width: 100%;
+  padding-bottom: 5%;
+  position: relative;
+  margin-top: 10px;
+}
+
+.card-body-home {
+  border: 6px solid white;
+}
+
+#home-aside > .user-card > div {
+  width: 100%;
+}
+
+#home-aside .card-link > p {
+  text-align: left;
+  position: relative;
+}
+
+.playlist-card {
+  width: 100%;
+  padding-bottom: 5%;
+  border-radius: 5px;
+  border: 6px solid #c9f1ff;
+  position: relative;
+  background: #fcfcfc;
+  margin-top: 20px;
+}
+
+.playlist-card:hover {
+  background: #c9f1ff;
+}
+
+.card-text-title {
+  text-align: center;
+  color: black;
+}
+
+.card-text-title a {
+  text-decoration: none;
+
+}
+
+.card-text-title a:hover {
+  color:rgba(249, 180, 255, 0.913);
+}
+
+.card-text-about {
+  margin-left: 1rem;
+}
+
+#home-aside-two .stat h4 {
+  text-align: left;
+}
+
+
+/* ========================== Signup/Login */
+
+#user_form input.form-control {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+/* =========================== Edit Page */
+
+.edit-btn-area {
+
+  justify-content: space-between;
+}
+
+.edit-btn-area > .btn {
+  width: 48%;
+}
+
+/* =========================== Movies Show page */
+
+.movie-image {
+  float:left;
+
+}
+
+#movie-info {
+  display: flex;
+
+}
+
+
+
+/* ================================ 404 page */
+
+.message-404 {
+  color: white;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.message-404 a {
+  color: white;
+}
+
+.message-404 > h4.display-4 {
+  font-size: 2.5em;
+}
+
+.message-404 .form-inline input {
+  flex: 1;
+}
+

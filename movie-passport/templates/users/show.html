@@ -1,0 +1,28 @@
+{% extends 'users/detail.html' %}
+{% block user_details %}
+  <div class="col-sm-6">
+    <ul class="list-group" id="playlists">
+      <h2>My Playlists:</h2>
+      {% for playlist in user.playlists %}
+
+        <div class="playlist-card">
+          <a href="/playlists/{{ playlist.id }}" class="playlist-link"></a>
+
+          <a href="/users/{{ user.id }}">
+            <img src="{{ user.image_url }}" alt="user image" class="timeline-image">
+          </a>
+
+
+            <a href="/users/{{ user.id }}">@{{ user.username }}</a>
+            <div class="message-area">
+            <h4 class="show-playlist-name">{{ playlist.playlist_name }}</h4>
+            <p class="show-playlist-about">{{ playlist.playlist_about }}</p>
+          </div>
+
+        </div>
+
+      {% endfor %}
+
+    </ul>
+  </div>
+{% endblock %}

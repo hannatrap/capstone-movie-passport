@@ -10,6 +10,7 @@ Flask-Bcrypt==0.7.1
 Flask-DebugToolbar==0.10.1
 Flask-SQLAlchemy==2.4.1
 Flask-WTF==0.14.2
+gunicorn
 ipython==8.5.0
 itsdangerous==1.1.0
 jedi==0.18.1

@@ -1,5 +1,7 @@
 # capstone-movie-passport
 
+Deployed: https://movie-passport.herokuapp.com/
+
 API: https://www.omdbapi.com/
 
 Title: Movie Passport
